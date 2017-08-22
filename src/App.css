@@ -2,9 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.poke-header {
+  animation: poke-header-spin infinite 10s linear;
   height: 80px;
+
 }
 
 .App-header {
@@ -18,7 +19,12 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes poke-header-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+body{
+  background-image: url("https://images3.alphacoders.com/273/273289.jpg");
+  background-size: cover;
 }

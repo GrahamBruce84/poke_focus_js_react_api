@@ -10,7 +10,8 @@ export default class PokeContainer extends React.Component{
     super(props);
     this.state = {
       pokemons: [],
-      focusPoke: null
+      focusPoke: null,
+      theme: new Audio('./poketheme.mp3')
     };
   }
 
@@ -26,7 +27,7 @@ export default class PokeContainer extends React.Component{
         // debugger;
         this.setState({
           pokemons: dataSorted,
-          focusPoke: data.results[0]
+          focusPoke: null
         });
       }
     });
@@ -55,6 +56,7 @@ export default class PokeContainer extends React.Component{
     return (
       <div className="poke-ball">
       <Header />
+
       <PokeSelector
       pokemons={this.state.pokemons}
       selectPokemon={this.setFocusPoke.bind(this)}
